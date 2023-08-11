@@ -1,0 +1,30 @@
+package main.java.net.media.training.designpattern.abstractfactory;
+
+import net.media.training.designpattern.abstractfactory.AndroidMotherBoard;
+import net.media.training.designpattern.abstractfactory.AndroidProcessor;
+import net.media.training.designpattern.abstractfactory.Battery;
+import net.media.training.designpattern.abstractfactory.Case;
+import net.media.training.designpattern.abstractfactory.IphoneMotherBoard;
+import net.media.training.designpattern.abstractfactory.IphoneProcessor;
+import net.media.training.designpattern.abstractfactory.MotherBoard;
+import net.media.training.designpattern.abstractfactory.Processor;
+import net.media.training.designpattern.abstractfactory.Screen;
+
+public class AndriodFactory implements PhoneFactory {
+
+    public MotherBoard getMotherBoard(){
+        return new AndroidMotherBoard();
+    };
+
+    public Processor getProcessor(){
+        return new AndroidProcessor();
+    };
+
+    public Battery getBattery(){
+        return new Battery();
+    };
+
+    public Screen getScreen(){
+        return new Screen();
+    };
+}
